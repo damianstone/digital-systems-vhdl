@@ -6,8 +6,11 @@ architecture Method3 of entiry is
 
   begin
     process (a, b, c)
+    -- variables declaration
     variable a_or_b : STD_LOGIC;
     variable not_c : STD_LOGIC;
+
+    -- use of variables
     begin
         a_or_b := a or b;
         not_c := not c;
@@ -16,6 +19,7 @@ architecture Method3 of entiry is
             y <= '1';
         else
             y <= '0';
+            
         end if;
     end process;
 
