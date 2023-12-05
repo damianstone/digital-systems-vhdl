@@ -3,17 +3,16 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity mux_4to1 is
     Port ( 
-        S : in STD_LOGIC_VECTOR(1 downto 0);
-        I : in STD_LOGIC_VECTOR(3 downto 0);  
-        Y : out STD_LOGIC  
+        Sel : in STD_LOGIC_VECTOR(1 downto 0);
+        I : in STD_LOGIC_VECTOR(7 downto 0);  
+        O : out STD_LOGIC  
     );
 end mux_4to1;
 
 architecture Behavioral of mux_4to1 is
   
 begin
-    process (S, I)
-
+    process (Sel, I)
     begin
         case S is
             when "00" =>
