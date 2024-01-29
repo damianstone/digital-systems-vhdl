@@ -10,6 +10,6 @@ end COMPARATOR;
 
 architecture BEHAV of COMPARATOR is
 begin
-  AequalB <= '1' when A == B else '0';
+  AequalB <= '1' when A = B else '0';
   AlessB <= '1' when A < B else '0';
 end BEHAV;
